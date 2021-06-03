@@ -1,5 +1,6 @@
 # DynaLauncher
-![Discord](https://img.shields.io/discord/770801185925496842?color=%237289DA&label=Discord&logo=discord&logoColor=white&style=flat-square)
+
+[<img src="https://img.shields.io/discord/770801185925496842?color=%237289DA&label=Discord&logo=discord&logoColor=white&style=flat-square">](https://discord.gg/hR3W5de4dX)
 
 A game launcher losely based on the Nintendo Switch UI, but more dynamic, hence DynaLauncher.
 
