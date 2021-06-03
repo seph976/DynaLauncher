@@ -30,6 +30,7 @@ global.CemuPath = ""
 global.Snes9xPath = ""
 global.Project64Path = ""
 global.MesenPath = ""
+global.VBAMPath = ""
 
 //Check if settings exists
 if !file_exists(game_save_id + "\\settings.ini") then{
@@ -47,6 +48,7 @@ if !file_exists(game_save_id + "\\settings.ini") then{
 	ini_write_string("EMULATOR","Super Nintendo",global.Snes9xPath)
 	ini_write_string("EMULATOR","Nintendo 64",global.Project64Path)
 	ini_write_string("EMULATOR","Nintendo Entertainment System",global.MesenPath)
+	ini_write_string("EMULATOR","Gameboy / Color / Advance",global.VBAMPath)
 	ini_write_real("SYSTEM","Discord",global.Discord)
 	ini_write_real("SYSTEM","Debug",global.Debug)
 	ini_close()
@@ -66,6 +68,7 @@ else{
 	global.Snes9xPath = ini_read_string("EMULATOR","Super Nintendo",global.Snes9xPath)
 	global.Project64Path = ini_read_string("EMULATOR","Nintendo 64",global.Project64Path)
 	global.MesenPath = ini_read_string("EMULATOR","Nintendo Entertainment System",global.MesenPath)
+	global.VBAMPath = ini_read_string("EMULATOR","Gameboy / Color / Advance",global.VBAMPath)
 	global.Discord = ini_read_real("SYSTEM","Discord",global.Discord)
 	global.Debug = ini_read_real("SYSTEM","Debug",global.Debug)
 	ini_close()

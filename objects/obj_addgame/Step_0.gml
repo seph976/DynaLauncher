@@ -103,9 +103,10 @@ if mouse_x > 25 and mouse_x < 845 and mouse_y > 91 + (36 * 7) and mouse_y < 128 
 		var _emu0 = ""
 		var _emu1 = "Nintendo Entertainment System"
 		var _emu2 = "Super Nintendo"
-		var _emu3 = "Nintendo 64"
-		var _emu4 = "Gamecube / Wii"
-		var _emu5 = "Wii U"
+		var _emu3 = "Gameboy / Color / Advance"
+		var _emu4 = "Nintendo 64"
+		var _emu5 = "Gamecube / Wii"
+		var _emu6 = "Wii U"
 		//Stuff
 		switch Emulator{
 			case _emu0:
@@ -124,6 +125,9 @@ if mouse_x > 25 and mouse_x < 845 and mouse_y > 91 + (36 * 7) and mouse_y < 128 
 				Emulator = _emu5
 			break
 			case _emu5:
+				Emulator = _emu6
+			break
+			case _emu6:
 				Emulator = _emu0
 			break
 		}
