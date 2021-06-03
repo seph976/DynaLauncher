@@ -91,5 +91,23 @@ function rungame(argument0){
 				execute_shell(game_save_id + "gameboot.bat",argument0)
 			}
 		break
+		case "Nintendo Entertainment System":
+			if global.MesenPath = "" then{
+				show_message(string(global.tr_error[6]))
+			}
+			else{
+				var _file = file_text_open_write(game_save_id + "gameboot.bat")
+				file_text_write_string(_file,"chcp 65001")
+				file_text_writeln(_file)
+				if argument0 = true then{
+					file_text_write_string(_file,"call \"" + string(global.MesenPath) + "\"" + " -g \"" + string(Location) + "\"")
+				}
+				else{
+					file_text_write_string(_file,"\"" + string(global.MesenPath) + "\" \"" + string(Location) + "\"")
+				}
+				file_text_close(_file)
+				execute_shell(game_save_id + "gameboot.bat",argument0)
+			}
+		break
 	}
 }

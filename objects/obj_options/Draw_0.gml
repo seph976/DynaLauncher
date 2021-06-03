@@ -163,15 +163,17 @@ if Category = 2 then{
 //Emulators
 if Category = 3 then{
 	//Order
-	var _snes = 0
-	var _n64 = 1
-	var _dolphin = 2
-	var _cemu = 3
+	var _nes = 0
+	var _snes = 1
+	var _n64 = 2
+	var _dolphin = 3
+	var _cemu = 4
 	//Hover
 	draw_sprite(spr_optionsbox,0,425,91 + (_dolphin * 36))
 	draw_sprite(spr_optionsbox,0,425,91 + (_cemu * 36))
 	draw_sprite(spr_optionsbox,0,425,91 + (_snes * 36))
 	draw_sprite(spr_optionsbox,0,425,91 + (_n64 * 36))
+	draw_sprite(spr_optionsbox,0,425,91 + (_nes * 36))
 	if mouse_x > 425 and mouse_x < 1245 and mouse_y > 91 + (36 * _dolphin) and mouse_y < 128 + (36 * _dolphin) and Category = 3 then{
 		draw_sprite(spr_optionsbox,1,425,91 + (36 * _dolphin))
 		draw_sprite_ext(spr_optionsbox,2,425,91 + (36 * _dolphin),1,1,0,col_highlight,1)
@@ -188,6 +190,10 @@ if Category = 3 then{
 		draw_sprite(spr_optionsbox,1,425,91 + (36 * _n64))
 		draw_sprite_ext(spr_optionsbox,2,425,91 + (36 * _n64),1,1,0,col_highlight,1)
 	}
+	if mouse_x > 425 and mouse_x < 1245 and mouse_y > 91 + (36 * _nes) and mouse_y < 128 + (36 * _nes) and Category = 3 then{
+		draw_sprite(spr_optionsbox,1,425,91 + (36 * _nes))
+		draw_sprite_ext(spr_optionsbox,2,425,91 + (36 * _nes),1,1,0,col_highlight,1)
+	}
 	//Options
 	draw_set_halign(fa_left)
 	draw_set_font(font_system_14)
@@ -195,6 +201,7 @@ if Category = 3 then{
 	draw_text(440,98 + (_cemu * 36),"Wii U (Cemu)")
 	draw_text(440,98 + (_snes * 36),"Super Nintendo (Snes9x)")
 	draw_text(440,98 + (_n64 * 36),"Nintendo 64 (Project64)")
+	draw_text(440,98 + (_nes * 36),"Nintendo Entertainment System (Mesen)")
 	//Values
 	draw_set_halign(fa_right)
 	if global.DolphinPath != "" then{
@@ -233,6 +240,15 @@ if Category = 3 then{
 		var _color = c_red
 	}
 	draw_text_color(1230,98 + (_n64 * 36),string(_path),_color,_color,_color,_color,1)
+	if global.MesenPath != "" then{
+		var _path = global.tr_general[4]
+		var _color = c_lime
+	}
+	else{
+		var _path = global.tr_general[3]
+		var _color = c_red
+	}
+	draw_text_color(1230,98 + (_nes * 36),string(_path),_color,_color,_color,_color,1)
 }
 
 

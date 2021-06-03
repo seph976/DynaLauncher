@@ -249,10 +249,11 @@ if mouse_x > 425 and mouse_x < 1245 and mouse_y > 91 + (36 * 2) and mouse_y < 12
 
 //Emulators
 //Order
-var _snes = 0
-var _n64 = 1
-var _dolphin = 2
-var _cemu = 3
+var _nes = 0
+var _snes = 1
+var _n64 = 2
+var _dolphin = 3
+var _cemu = 4
 //Dolphin
 if mouse_x > 425 and mouse_x < 1245 and mouse_y > 91 + (36 * _dolphin) and mouse_y < 128 + (36 * _dolphin) and Category = 3 then{
 	if mouse_check_button_pressed(mb_left) then{
@@ -298,6 +299,18 @@ if mouse_x > 425 and mouse_x < 1245 and mouse_y > 91 + (36 * _n64) and mouse_y <
 		global.Project64Path = get_open_filename("","")
 		ini_open(game_save_id + "\\settings.ini")
 		ini_write_string("EMULATOR","Nintendo 64",global.Project64Path)
+		ini_close()
+	}
+}
+//NES
+if mouse_x > 425 and mouse_x < 1245 and mouse_y > 91 + (36 * _nes) and mouse_y < 128 + (36 * _nes) and Category = 3 then{
+	if mouse_check_button_pressed(mb_left) then{
+		if global.PlaySFX = true then{
+			audio_play_sound(sfx_cursor2,1,false)
+		}
+		global.MesenPath = get_open_filename("","")
+		ini_open(game_save_id + "\\settings.ini")
+		ini_write_string("EMULATOR","Nintendo Entertainment System",global.MesenPath)
 		ini_close()
 	}
 }

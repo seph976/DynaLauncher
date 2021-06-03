@@ -1,7 +1,7 @@
 /// @description Setup
 
 //System
-global.Version = "1.1.0"
+global.Version = "1.1.1 DEV"
 
 //Setup
 global.Theme = 1 //0 - Light / 1 - Dark
@@ -29,6 +29,7 @@ global.DolphinPath = ""
 global.CemuPath = ""
 global.Snes9xPath = ""
 global.Project64Path = ""
+global.MesenPath = ""
 
 //Check if settings exists
 if !file_exists(game_save_id + "\\settings.ini") then{
@@ -45,6 +46,7 @@ if !file_exists(game_save_id + "\\settings.ini") then{
 	ini_write_string("EMULATOR","Wii U",global.CemuPath)
 	ini_write_string("EMULATOR","Super Nintendo",global.Snes9xPath)
 	ini_write_string("EMULATOR","Nintendo 64",global.Project64Path)
+	ini_write_string("EMULATOR","Nintendo Entertainment System",global.MesenPath)
 	ini_write_real("SYSTEM","Discord",global.Discord)
 	ini_write_real("SYSTEM","Debug",global.Debug)
 	ini_close()
@@ -63,6 +65,7 @@ else{
 	global.CemuPath = ini_read_string("EMULATOR","Wii U",global.CemuPath)
 	global.Snes9xPath = ini_read_string("EMULATOR","Super Nintendo",global.Snes9xPath)
 	global.Project64Path = ini_read_string("EMULATOR","Nintendo 64",global.Project64Path)
+	global.MesenPath = ini_read_string("EMULATOR","Nintendo Entertainment System",global.MesenPath)
 	global.Discord = ini_read_real("SYSTEM","Discord",global.Discord)
 	global.Debug = ini_read_real("SYSTEM","Debug",global.Debug)
 	ini_close()
