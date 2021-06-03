@@ -1,4 +1,6 @@
 # DynaLauncher
+![Discord](https://img.shields.io/discord/770801185925496842?color=%237289DA&label=Discord&logo=discord&logoColor=white&style=flat-square)
+
 A game launcher losely based on the Nintendo Switch UI, but more dynamic, hence DynaLauncher.
 
 This project was inspired by the Ninty Launcher which you can find here: https://github.com/ninstar/Ninty-Launcher
@@ -20,3 +22,5 @@ Anyway, here are some screenshots:
 ![Image](https://i.imgur.com/dqUlVCj.png)
 
 Full album of screenshots: https://imgur.com/a/w8v5Sl0
+
+This page is not finished yet.
