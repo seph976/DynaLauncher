@@ -209,5 +209,10 @@ function discord_check_icon(){
 			discord_set_image_large("chronotrigger")
 			discord_set_image_small("playing")
 		break
+		case "The Legend of Zelda: Minish Cap":
+			discord_set_server(global.DID1)
+			discord_set_image_large("zeldamc")
+			discord_set_image_small("playing")
+		break
 	}
 }
