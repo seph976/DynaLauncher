@@ -209,9 +209,34 @@ function discord_check_icon(){
 			discord_set_image_large("chronotrigger")
 			discord_set_image_small("playing")
 		break
-		case "The Legend of Zelda: Minish Cap":
+		case "The Legend of Zelda: The Minish Cap":
 			discord_set_server(global.DID1)
 			discord_set_image_large("zeldamc")
+			discord_set_image_small("playing")
+		break
+		case "Secret of Mana":
+			discord_set_server(global.DID1)
+			discord_set_image_large("secretofmana")
+			discord_set_image_small("playing")
+		break
+		case "Trials of Mana":
+			discord_set_server(global.DID1)
+			discord_set_image_large("trialsofmana")
+			discord_set_image_small("playing")
+		break
+		case "State of Decay 2":
+			discord_set_server(global.DID1)
+			discord_set_image_large("stateofdecay2")
+			discord_set_image_small("playing")
+		break
+		case "Minecraft Dungeons":
+			discord_set_server(global.DID1)
+			discord_set_image_large("minecraftdungeons")
+			discord_set_image_small("playing")
+		break
+		case "Escape From Tarkov":
+			discord_set_server(global.DID1)
+			discord_set_image_large("escapefromtarkov")
 			discord_set_image_small("playing")
 		break
 	}
