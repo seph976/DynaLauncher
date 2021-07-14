@@ -9,7 +9,7 @@ layer_background_change(layer_background_get_id(layer_get_id("Background")),spr_
 
 //News
 News =
-"Version: 1.1.1 (XX/XX/2021)\n-Added support for Mesen (NES emulator).\n-Added support for VBA-M (GB / GBC / GBA emulator)\n-Added more icons for rich presence." +
+"Version: 1.1.1 (14/07/2021)\n-Added support for Mesen (NES emulator).\n-Added support for VBA-M (GB / GBC / GBA emulator)\n-Added more icons for rich presence." +
 "\n\n" +
 "Version: 1.1.0 (03/06/2021)\n-Added support for various Nintendo emulators, more coming soon!\n-Made it possible to edit games ini files by selecting it and pressing E.\n-Added more icons for rich presence.\n-Now open source on GitHub!" +
 "\n\n" +
