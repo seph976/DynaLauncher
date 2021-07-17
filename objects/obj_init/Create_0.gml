@@ -1,7 +1,7 @@
 /// @description Setup
 
 //System
-global.Version = "1.1.1"
+global.Version = "1.2.0 DEV"
 
 //Setup
 global.Theme = 1 //0 - Light / 1 - Dark
@@ -143,6 +143,14 @@ else{
 	ini_open(game_save_id + "\\Games\\games.ini")
 	global.Games = ini_read_real("GAMES","Amount",0)
 	ini_close()
+}
+
+//Check custom theme
+if !directory_exists(game_save_id + "\\Theme") then{
+	theme_create()
+}
+else{
+	theme_import()
 }
 
 //Discord rich presence

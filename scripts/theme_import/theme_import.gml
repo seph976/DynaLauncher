@@ -1,0 +1,22 @@
+//theme_import()
+function theme_import(){
+	var _loc = game_save_id + "\\Theme\\"
+	sprite_replace(spr_wallpaper,_loc + "wallpaper.png",0,0,0,0,0)
+	sprite_replace(spr_topbar,_loc + "topbar.png",0,0,0,0,0)
+	sprite_replace(spr_logo,_loc + "logo.png",0,0,0,sprite_get_width(spr_logo) / 2,sprite_get_height(spr_logo) / 2)
+	sprite_replace(spr_addgame,_loc + "addgame_button.png",0,0,0,0,0)
+	sprite_replace(spr_allapps,_loc + "allapps_button.png",0,0,0,0,0)
+	sprite_replace(spr_news,_loc + "news_button.png",0,0,0,0,0)
+	sprite_replace(spr_settings,_loc + "settings_button.png",0,0,0,0,0)
+	sprite_replace(spr_shop,_loc + "shop_button.png",0,0,0,0,0)
+	sprite_replace(spr_addgameicon,_loc + "addgame_icon.png",0,0,0,0,0)
+	sprite_replace(spr_allappsicon,_loc + "allapps_icon.png",0,0,0,0,0)
+	sprite_replace(spr_newsicon,_loc + "news_icon.png",0,0,0,0,0)
+	sprite_replace(spr_settingsicon,_loc + "settings_icon.png",0,0,0,0,0)
+	sprite_replace(spr_profileicon,_loc + "profile_icon.png",0,0,0,0,0)
+	sprite_replace(spr_clock,_loc + "clock.png",0,0,0,sprite_get_width(spr_clock) / 2,sprite_get_height(spr_clock) / 2)
+	sprite_replace(spr_updateicon,_loc + "update_0.png",0,0,0,sprite_get_width(spr_updateicon) / 2,sprite_get_height(spr_updateicon) / 2)
+	sprite_replace(spr_updateicon,_loc + "update_1.png",1,0,0,sprite_get_width(spr_updateicon) / 2,sprite_get_height(spr_updateicon) / 2)
+	sprite_replace(spr_scroll_vertical,_loc + "scrollbar_vertical.png",0,0,0,0,0)
+	sprite_replace(spr_nogameicon,_loc + "nogameicon.png",0,0,0,0,0)
+}

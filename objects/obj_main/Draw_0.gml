@@ -10,7 +10,7 @@ else if global.Theme = 1 then{
 
 //Logo
 if Cursor = -1 or !file_exists(game_save_id + "Games\\" + string(Cursor + 1) + "\\logo.png") then{
-	draw_sprite(spr_logo,0,room_width / 2,63)
+	draw_sprite(spr_logo,0,room_width / 2,189)
 }
 
 //Game info
@@ -68,7 +68,7 @@ if Cursor > -1 then{
 }
 
 //Top stuff
-draw_rectangle_color(0,0,1280,62,col_tdark,col_tdark,col_tdark,col_tdark,false)
+draw_sprite(spr_topbar,0,0,0)
 draw_set_font(font_clock)
 draw_set_halign(fa_left)
 var _hour = current_hour
