@@ -128,16 +128,6 @@ else{
 	global.Profilepic = undefined
 }
 
-//Color Animation
-col_mode = 0
-col_numb = 0
-
-//Theme color macros
-#macro col_tlight make_color_rgb(240,240,240)
-#macro col_tdark make_color_rgb(79,79,79)
-#macro col_highlight merge_colour(c_aqua,c_teal,obj_init.col_numb)
-#macro col_highlight_green merge_colour(c_lime,c_green,obj_init.col_numb)
-
 //Check games amount
 if !directory_exists(game_save_id + "\\Games") then{
 	directory_create("Games")
@@ -151,6 +141,14 @@ else{
 	ini_close()
 }
 
+//Color variables
+global.h1_red = 0
+global.h1_green = 255
+global.h1_blue = 255
+global.h2_red = 0
+global.h2_green = 128
+global.h2_blue = 128
+
 //Check custom theme
 if !directory_exists(game_save_id + "\\Theme") then{
 	theme_create()
@@ -158,6 +156,16 @@ if !directory_exists(game_save_id + "\\Theme") then{
 else{
 	theme_import()
 }
+
+//Color Animation
+col_mode = 0
+col_numb = 0
+
+//Theme color macros
+#macro col_tlight make_color_rgb(240,240,240)
+#macro col_tdark make_color_rgb(79,79,79)
+#macro col_highlight merge_colour(make_color_rgb(global.h1_red,global.h1_green,global.h1_blue),make_color_rgb(global.h2_red,global.h2_green,global.h2_blue),obj_init.col_numb)
+#macro col_highlight_green merge_colour(make_color_rgb(0,255,0),make_color_rgb(0,128,0),obj_init.col_numb)
 
 //Discord rich presence
 if global.Discord = true then{

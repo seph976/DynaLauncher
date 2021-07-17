@@ -1,6 +1,7 @@
 //theme_import()
 function theme_import(){
 	var _loc = game_save_id + "\\Theme\\"
+	//Import images
 	sprite_replace(spr_wallpaper,_loc + "wallpaper.png",0,0,0,0,0)
 	sprite_replace(spr_topbar,_loc + "topbar.png",0,0,0,0,0)
 	sprite_replace(spr_logo,_loc + "logo.png",0,0,0,sprite_get_width(spr_logo) / 2,sprite_get_height(spr_logo) / 2)
@@ -21,4 +22,13 @@ function theme_import(){
 	sprite_replace(spr_nogameicon,_loc + "nogameicon.png",0,0,0,0,0)
 	sprite_replace(spr_keyboard,_loc + "keyboard_dark.png",0,0,0,sprite_get_width(spr_keyboard) / 2,sprite_get_height(spr_keyboard) / 2)
 	sprite_replace(spr_keyboard,_loc + "keyboard_light.png",1,0,0,sprite_get_width(spr_keyboard) / 2,sprite_get_height(spr_keyboard) / 2)
+	//Import settings
+	ini_open(_loc + "settings.ini")
+	global.h1_red = ini_read_real("Highlight Color 1/2","Red",global.h1_red)
+	global.h1_green = ini_read_real("Highlight Color 1/2","Green",global.h1_green)
+	global.h1_blue = ini_read_real("Highlight Color 1/2","Blue",global.h1_blue)
+	global.h2_red = ini_read_real("Highlight Color 2/2","Red",global.h2_red)
+	global.h2_green = ini_read_real("Highlight Color 2/2","Green",global.h2_green)
+	global.h2_blue = ini_read_real("Highlight Color 2/2","Blue",global.h2_blue)
+	ini_close()
 }
