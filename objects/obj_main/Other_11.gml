@@ -35,37 +35,39 @@ else{
 }
 
 //Update wallpaper
-layer_background_vtiled(layer_background_get_id(layer_get_id("Background")),false)
-layer_background_htiled(layer_background_get_id(layer_get_id("Background")),false)
-layer_hspeed("Background",0)
-layer_vspeed("Background",0)
-layer_x("Background",0)
-layer_y("Background",0)
-if Wallpaper != undefined then{
-	sprite_delete(Wallpaper)
-}
-if file_exists(game_save_id + "Games\\" + string(Cursor + 1) + "\\wallpaper.png") then{
-	Wallpaper = sprite_add(game_save_id + "Games\\" + string(Cursor + 1) + "\\wallpaper.png",0,false,false,0,0)
-	layer_background_change(layer_background_get_id(layer_get_id("Background")),Wallpaper)
-	if Tiled = true then{
-		layer_background_vtiled(layer_background_get_id(layer_get_id("Background")),true)
-		layer_background_htiled(layer_background_get_id(layer_get_id("Background")),true)
-		if global.FPS = 30 then{
-			layer_hspeed("Background",WPHspeed * 2)
-			layer_vspeed("Background",WPVspeed * 2)
-		}
-		else if global.FPS = 60 then{
-			layer_hspeed("Background",WPHspeed)
-			layer_vspeed("Background",WPVspeed)
-		}
-		else if global.FPS = 120 then{
-			layer_hspeed("Background",WPHspeed / 2)
-			layer_vspeed("Background",WPVspeed / 2)
+if global.DynamicWP = true then{
+	layer_background_vtiled(layer_background_get_id(layer_get_id("Background")),false)
+	layer_background_htiled(layer_background_get_id(layer_get_id("Background")),false)
+	layer_hspeed("Background",0)
+	layer_vspeed("Background",0)
+	layer_x("Background",0)
+	layer_y("Background",0)
+	if Wallpaper != undefined then{
+		sprite_delete(Wallpaper)
+	}
+	if file_exists(game_save_id + "Games\\" + string(Cursor + 1) + "\\wallpaper.png") then{
+		Wallpaper = sprite_add(game_save_id + "Games\\" + string(Cursor + 1) + "\\wallpaper.png",0,false,false,0,0)
+		layer_background_change(layer_background_get_id(layer_get_id("Background")),Wallpaper)
+		if Tiled = true then{
+			layer_background_vtiled(layer_background_get_id(layer_get_id("Background")),true)
+			layer_background_htiled(layer_background_get_id(layer_get_id("Background")),true)
+			if global.FPS = 30 then{
+				layer_hspeed("Background",WPHspeed * 2)
+				layer_vspeed("Background",WPVspeed * 2)
+			}
+			else if global.FPS = 60 then{
+				layer_hspeed("Background",WPHspeed)
+				layer_vspeed("Background",WPVspeed)
+			}
+			else if global.FPS = 120 then{
+				layer_hspeed("Background",WPHspeed / 2)
+				layer_vspeed("Background",WPVspeed / 2)
+			}
 		}
 	}
-}
-else{
-	layer_background_change(layer_background_get_id(layer_get_id("Background")),spr_wallpaper)
+	else{
+		layer_background_change(layer_background_get_id(layer_get_id("Background")),spr_wallpaper)
+	}
 }
 
 //Update logo

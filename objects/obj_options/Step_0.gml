@@ -169,6 +169,40 @@ if mouse_x > 425 and mouse_x < 1245 and mouse_y > 91 + (36 * 4) and mouse_y < 12
 		ini_close()
 	}
 }
+//Dynamic Wallpaper
+if mouse_x > 425 and mouse_x < 1245 and mouse_y > 91 + (36 * 5) and mouse_y < 128 + (36 * 5) and Category = 0 then{
+	if mouse_check_button_pressed(mb_left) then{
+		if global.PlaySFX = true then{
+			audio_play_sound(sfx_cursor2,1,false)
+		}
+		if global.DynamicWP = true then{
+			global.DynamicWP = false
+		}
+		else{
+			global.DynamicWP = true
+		}
+		ini_open(game_save_id + "\\settings.ini")
+		ini_write_real("VIDEO","DynamicWP",global.DynamicWP)
+		ini_close()
+	}
+}
+//Dynamic Logo
+if mouse_x > 425 and mouse_x < 1245 and mouse_y > 91 + (36 * 6) and mouse_y < 128 + (36 * 6) and Category = 0 then{
+	if mouse_check_button_pressed(mb_left) then{
+		if global.PlaySFX = true then{
+			audio_play_sound(sfx_cursor2,1,false)
+		}
+		if global.DynamicLogo = true then{
+			global.DynamicLogo = false
+		}
+		else{
+			global.DynamicLogo = true
+		}
+		ini_open(game_save_id + "\\settings.ini")
+		ini_write_real("VIDEO","DynamicLogo",global.DynamicLogo)
+		ini_close()
+	}
+}
 
 //Audio settings
 //SFX

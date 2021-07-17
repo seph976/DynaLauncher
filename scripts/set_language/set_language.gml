@@ -40,6 +40,8 @@ function set_language(argument0){
 			global.tr_option[8] = "Debugging"
 			global.tr_option[9] = "Open System Folder"
 			global.tr_option[10] = "Interpolation"
+			global.tr_option[11] = "Dynamic Wallpaper"
+			global.tr_option[12] = "Dynamic Logo"
 			//Add game menu
 			global.tr_addgeneral[0] = "General game settings:"
 			global.tr_addgeneral[1] = "Game Name"
@@ -128,6 +130,8 @@ function set_language(argument0){
 			global.tr_option[8] = "Ferramentas de debug"
 			global.tr_option[9] = "Abrir pasta do sistema"
 			global.tr_option[10] = "Interpolação"
+			global.tr_option[11] = "Dynamic Wallpaper" //NEEDS TRANSLATION
+			global.tr_option[12] = "Dynamic Logo" //NEEDS TRANSLATION
 			//Add game menu
 			global.tr_addgeneral[0] = "Configurações gerais do jogo:"
 			global.tr_addgeneral[1] = "Nome do jogo"
@@ -216,6 +220,8 @@ function set_language(argument0){
 			global.tr_option[8] = "Дебаг меню"
 			global.tr_option[9] = "Открыть системную папку"
 			global.tr_option[10] = "Интерполяция"
+			global.tr_option[11] = "Dynamic Wallpaper" //NEEDS TRANSLATION
+			global.tr_option[12] = "Dynamic Logo" //NEEDS TRANSLATION
 			//Add game menu
 			global.tr_addgeneral[0] = "Настройки игры:"
 			global.tr_addgeneral[1] = "Название игры"

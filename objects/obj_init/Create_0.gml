@@ -18,6 +18,8 @@ global.Fullscreen = false
 global.FPS = 60
 global.Interpolation = false
 global.Cursor = 0
+global.DynamicWP = true
+global.DynamicLogo = true
 global.PlaySFX = true
 global.PlayBGM = true
 global.Language = 0
@@ -39,6 +41,8 @@ if !file_exists(game_save_id + "\\settings.ini") then{
 	ini_write_real("VIDEO","Fullscreen",global.Fullscreen)
 	ini_write_real("VIDEO","FPS",global.FPS)
 	ini_write_real("VIDEO","Interpolation",global.Interpolation)
+	ini_write_real("VIDEO","DynamicWP",global.DynamicWP)
+	ini_write_real("VIDEO","DynamicLogo",global.DynamicLogo)
 	ini_write_real("VIDEO","Cursor",global.Cursor)
 	ini_write_real("AUDIO","PlaySFX",global.PlaySFX)
 	ini_write_real("AUDIO","PlayBGM",global.PlayBGM)
@@ -60,6 +64,8 @@ else{
 	global.FPS = ini_read_real("VIDEO","FPS",global.FPS)
 	global.Interpolation = ini_read_real("VIDEO","Interpolation",global.Interpolation)
 	global.Cursor = ini_read_real("VIDEO","Cursor",global.Cursor)
+	global.DynamicWP = ini_read_real("VIDEO","DynamicWP",global.DynamicWP)
+	global.DynamicLogo = ini_read_real("VIDEO","DynamicLogo",global.DynamicLogo)
 	global.PlaySFX = ini_read_real("AUDIO","PlaySFX",global.PlaySFX)
 	global.PlayBGM = ini_read_real("AUDIO","PlayBGM",global.PlayBGM)
 	global.Language = ini_read_real("LANGUAGE","Language",global.Language)

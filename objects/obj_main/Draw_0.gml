@@ -14,8 +14,13 @@ if Cursor = -1 or !file_exists(game_save_id + "Games\\" + string(Cursor + 1) + "
 }
 
 //Game info
-if Cursor > -1 and file_exists(game_save_id + "Games\\" + string(Cursor + 1) + "\\logo.png") then{
-	draw_sprite(Logo,0,room_width / 2,63)
+if global.DynamicLogo = true then{
+	if Cursor > -1 and file_exists(game_save_id + "Games\\" + string(Cursor + 1) + "\\logo.png") then{
+		draw_sprite(Logo,0,room_width / 2,63)
+	}
+}
+else{
+	draw_sprite(spr_logo,0,room_width / 2,189)
 }
 if Gamename != "" then{
 	draw_set_halign(fa_left)

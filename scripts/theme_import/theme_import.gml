@@ -19,4 +19,6 @@ function theme_import(){
 	sprite_replace(spr_updateicon,_loc + "update_1.png",1,0,0,sprite_get_width(spr_updateicon) / 2,sprite_get_height(spr_updateicon) / 2)
 	sprite_replace(spr_scroll_vertical,_loc + "scrollbar_vertical.png",0,0,0,0,0)
 	sprite_replace(spr_nogameicon,_loc + "nogameicon.png",0,0,0,0,0)
+	sprite_replace(spr_keyboard,_loc + "keyboard_dark.png",0,0,0,sprite_get_width(spr_keyboard) / 2,sprite_get_height(spr_keyboard) / 2)
+	sprite_replace(spr_keyboard,_loc + "keyboard_light.png",1,0,0,sprite_get_width(spr_keyboard) / 2,sprite_get_height(spr_keyboard) / 2)
 }

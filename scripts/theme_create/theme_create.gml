@@ -62,4 +62,9 @@ function theme_create(){
 	_spr = sprite_duplicate(spr_nogameicon)
 	sprite_save(_spr,0,_loc + "nogameicon.png")
 	sprite_delete(_spr)
+	//Controller
+	_spr = sprite_duplicate(spr_keyboard)
+	sprite_save(_spr,0,_loc + "keyboard_dark.png")
+	sprite_save(_spr,1,_loc + "keyboard_light.png")
+	sprite_delete(_spr)
 }

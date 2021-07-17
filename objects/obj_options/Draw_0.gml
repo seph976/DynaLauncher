@@ -28,6 +28,8 @@ if Category = 0 then{
 	draw_sprite(spr_optionsbox,0,425,91 + (2 * 36))
 	draw_sprite(spr_optionsbox,0,425,91 + (3 * 36))
 	draw_sprite(spr_optionsbox,0,425,91 + (4 * 36))
+	draw_sprite(spr_optionsbox,0,425,91 + (5 * 36))
+	draw_sprite(spr_optionsbox,0,425,91 + (6 * 36))
 	if mouse_x > 425 and mouse_x < 1245 and mouse_y > 91 + (36 * 0) and mouse_y < 128 + (36 * 0) and Category = 0 then{
 		draw_sprite(spr_optionsbox,1,425,91 + (36 * 0))
 		draw_sprite_ext(spr_optionsbox,2,425,91 + (36 * 0),1,1,0,col_highlight,1)
@@ -48,6 +50,14 @@ if Category = 0 then{
 		draw_sprite(spr_optionsbox,1,425,91 + (36 * 4))
 		draw_sprite_ext(spr_optionsbox,2,425,91 + (36 * 4),1,1,0,col_highlight,1)
 	}
+	if mouse_x > 425 and mouse_x < 1245 and mouse_y > 91 + (36 * 5) and mouse_y < 128 + (36 * 5) and Category = 0 then{
+		draw_sprite(spr_optionsbox,1,425,91 + (36 * 5))
+		draw_sprite_ext(spr_optionsbox,2,425,91 + (36 * 5),1,1,0,col_highlight,1)
+	}
+	if mouse_x > 425 and mouse_x < 1245 and mouse_y > 91 + (36 * 6) and mouse_y < 128 + (36 * 6) and Category = 0 then{
+		draw_sprite(spr_optionsbox,1,425,91 + (36 * 6))
+		draw_sprite_ext(spr_optionsbox,2,425,91 + (36 * 6),1,1,0,col_highlight,1)
+	}
 	//Options
 	draw_set_halign(fa_left)
 	draw_set_font(font_system_14)
@@ -56,6 +66,8 @@ if Category = 0 then{
 	draw_text(440,98 + (2 * 36),string(global.tr_option[2]))
 	draw_text(440,98 + (3 * 36),string(global.tr_option[10]))
 	draw_text(440,98 + (4 * 36),string(global.tr_option[3]))
+	draw_text(440,98 + (5 * 36),string(global.tr_option[11]))
+	draw_text(440,98 + (6 * 36),string(global.tr_option[12]))
 	//Values
 	draw_set_halign(fa_right)
 	draw_text(1230,98,string(global.Resolution))
@@ -88,6 +100,24 @@ if Category = 0 then{
 	}
 	draw_text_color(1230,98 + (3 * 36),string(_interpolation),_color,_color,_color,_color,1)
 	draw_text(1230,98 + (4 * 36),string(_cursor))
+	if global.DynamicWP = 1 then{
+		var _dynamicwp = global.tr_general[0]
+		var _color = c_lime
+	}
+	else{
+		var _dynamicwp = global.tr_general[1]
+		var _color = c_red
+	}
+	draw_text_color(1230,98 + (5 * 36),string(_dynamicwp),_color,_color,_color,_color,1)
+	if global.DynamicLogo = 1 then{
+		var _dynamiclogo = global.tr_general[0]
+		var _color = c_lime
+	}
+	else{
+		var _dynamiclogo = global.tr_general[1]
+		var _color = c_red
+	}
+	draw_text_color(1230,98 + (6 * 36),string(_dynamiclogo),_color,_color,_color,_color,1)
 }
 
 //Audio settings
