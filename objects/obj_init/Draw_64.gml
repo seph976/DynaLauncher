@@ -7,6 +7,9 @@ if global.Cursor = 1 then{
 else if global.Cursor = 2 then{
 	draw_sprite_ext(spr_cursor_nx,0,mouse_x,mouse_y,1,1,0,col_highlight,1)
 }
+else if global.Cursor = 3 then{
+	draw_sprite_ext(spr_cursor_custom,0,mouse_x,mouse_y,1,1,0,col_highlight,1)
+}
 
 //Debug information
 if global.Debug = true then{

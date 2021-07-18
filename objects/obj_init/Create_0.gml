@@ -142,12 +142,11 @@ else{
 }
 
 //Color variables
-global.h1_red = 0
-global.h1_green = 255
-global.h1_blue = 255
-global.h2_red = 0
-global.h2_green = 128
-global.h2_blue = 128
+global.Col_Highlight1 = 16776960
+global.Col_Highlight2 = 8421376
+global.Col_Update1 = 65280
+global.Col_Update2 = 32768
+global.Col_TopBarText = 15790320
 
 //Check custom theme
 if !directory_exists(game_save_id + "\\Theme") then{
@@ -164,8 +163,9 @@ col_numb = 0
 //Theme color macros
 #macro col_tlight make_color_rgb(240,240,240)
 #macro col_tdark make_color_rgb(79,79,79)
-#macro col_highlight merge_colour(make_color_rgb(global.h1_red,global.h1_green,global.h1_blue),make_color_rgb(global.h2_red,global.h2_green,global.h2_blue),obj_init.col_numb)
-#macro col_highlight_green merge_colour(make_color_rgb(0,255,0),make_color_rgb(0,128,0),obj_init.col_numb)
+#macro col_toptext global.Col_TopBarText
+#macro col_highlight merge_colour(global.Col_Highlight1,global.Col_Highlight2,obj_init.col_numb)
+#macro col_highlight_update merge_colour(global.Col_Update1,global.Col_Update2,obj_init.col_numb)
 
 //Discord rich presence
 if global.Discord = true then{

@@ -2,14 +2,14 @@
 
 //Setup
 Scroll = 0
-MaxScroll = -20
+MaxScroll = -22
 
 //Wallpaper
 layer_background_change(layer_background_get_id(layer_get_id("Background")),spr_wallpaper)
 
 //News
 News =
-"Version: 1.2.0 (XX/XX/2021)\n-Theme update, you can now edit the main theme of the launcher!\n-Options added for enableing or disableing dynamic wallpapers and logos." +
+"Version: 1.2.0 (XX/XX/2021)\n-The main theme of the launcher is now customizable!\n-New and updated default theme for the launcher.\n-Options added for enableing or disableing dynamic wallpapers and logos.\n-Updated credits." +
 "\n\n" +
 "Version: 1.1.1 (14/07/2021)\n-Added support for Mesen (NES emulator).\n-Added support for VBA-M (GB / GBC / GBA emulator)\n-Added more icons for rich presence." +
 "\n\n" +

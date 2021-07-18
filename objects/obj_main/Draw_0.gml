@@ -85,11 +85,13 @@ if _minute < 10 then{
 	_minute = "0" + string(_minute)
 }
 draw_sprite(spr_clock,0,1175,32)
-draw_text_color(1200,20,string(_hour) + ":" + string(_minute),col_tlight,col_tlight,col_tlight,col_tlight,1)
+draw_text_color(1200,20,string(_hour) + ":" + string(_minute),col_toptext,col_toptext,col_toptext,col_toptext,1)
 var _menux = 497
 //Add game button
 if mouse_x > _menux + (0 * 60) and mouse_x < _menux + 47 + (0 * 60) and mouse_y > 8 and mouse_y < 55 and Pause = false then{
-	draw_sprite_ext(spr_addgame,0,_menux + (0 * 60),8,1,1,0,col_highlight,1)
+	gpu_set_fog(true,col_highlight,0,0)
+	draw_sprite(spr_addgame,0,_menux + (0 * 60),8)
+	gpu_set_fog(false,col_highlight,0,0)
 	draw_set_halign(fa_center)
 	draw_set_font(font_system_12)
 	draw_text_color(_menux + 23 + (0 * 60),65,string(global.tr_topbutton[0]),col_highlight,col_highlight,col_highlight,col_highlight,1)
@@ -99,7 +101,9 @@ else{
 }
 //Options button
 if mouse_x > _menux + (1 * 60) and mouse_x < _menux + 47 + (1 * 60) and mouse_y > 8 and mouse_y < 55 and Pause = false then{
-	draw_sprite_ext(spr_settings,0,_menux + (1 * 60),8,1,1,0,col_highlight,1)
+	gpu_set_fog(true,col_highlight,0,0)
+	draw_sprite(spr_settings,0,_menux + (1 * 60),8)
+	gpu_set_fog(false,col_highlight,0,0)
 	draw_set_halign(fa_center)
 	draw_set_font(font_system_12)
 	draw_text_color(_menux + 23 + (1 * 60),65,string(global.tr_topbutton[1]),col_highlight,col_highlight,col_highlight,col_highlight,1)
@@ -109,7 +113,9 @@ else{
 }
 //Shop button
 if mouse_x > _menux + (2 * 60) and mouse_x < _menux + 47 + (2 * 60) and mouse_y > 8 and mouse_y < 55 and Pause = false then{
-	draw_sprite_ext(spr_shop,0,_menux + (2 * 60),8,1,1,0,col_highlight,1)
+	gpu_set_fog(true,col_highlight,0,0)
+	draw_sprite(spr_shop,0,_menux + (2 * 60),8)
+	gpu_set_fog(false,col_highlight,0,0)
 	draw_set_halign(fa_center)
 	draw_set_font(font_system_12)
 	draw_text_color(_menux + 23 + (2 * 60),65,string(global.tr_topbutton[2]),col_highlight,col_highlight,col_highlight,col_highlight,1)
@@ -119,7 +125,9 @@ else{
 }
 //All apps button
 if mouse_x > _menux + (3 * 60) and mouse_x < _menux + 47 + (3 * 60) and mouse_y > 8 and mouse_y < 55 and Pause = false then{
-	draw_sprite_ext(spr_allapps,0,_menux + (3 * 60),8,1,1,0,col_highlight,1)
+	gpu_set_fog(true,col_highlight,0,0)
+	draw_sprite(spr_allapps,0,_menux + (3 * 60),8)
+	gpu_set_fog(false,col_highlight,0,0)
 	draw_set_halign(fa_center)
 	draw_set_font(font_system_12)
 	draw_text_color(_menux + 23 + (3 * 60),65,string(global.tr_topbutton[3]),col_highlight,col_highlight,col_highlight,col_highlight,1)
@@ -129,7 +137,9 @@ else{
 }
 //News button
 if mouse_x > _menux + (4 * 60) and mouse_x < _menux + 47 + (4 * 60) and mouse_y > 8 and mouse_y < 55 and Pause = false then{
-	draw_sprite_ext(spr_news,0,_menux + (4 * 60),8,1,1,0,col_highlight,1)
+	gpu_set_fog(true,col_highlight,0,0)
+	draw_sprite(spr_news,0,_menux + (4 * 60),8)
+	gpu_set_fog(false,col_highlight,0,0)
 	draw_set_halign(fa_center)
 	draw_set_font(font_system_12)
 	draw_text_color(_menux + 23 + (4 * 60),65,string(global.tr_topbutton[4]),col_highlight,col_highlight,col_highlight,col_highlight,1)
@@ -147,11 +157,13 @@ if LatestVersion = true then{
 	}
 }
 else{
-	draw_sprite_ext(spr_updateicon,1,1110,32,1,1,0,col_highlight_green,1)
+	gpu_set_fog(true,col_highlight_update,0,302)
+	draw_sprite(spr_updateicon,1,1110,32)
+	gpu_set_fog(false,col_highlight_update,0,0)
 	if mouse_x > 1092 and mouse_x < 1092 + 36 and mouse_y > 19 and mouse_y < 19 + 26 and Pause = false then{
 		draw_set_halign(fa_center)
 		draw_set_font(font_system_12)
-		draw_text_color(1110,65,string(global.tr_update[0]) + "\n(" + string(NewVersion) + ")",col_highlight_green,col_highlight_green,col_highlight_green,col_highlight_green,1)
+		draw_text_color(1110,65,string(global.tr_update[0]) + "\n(" + string(NewVersion) + ")",col_highlight_update,col_highlight_update,col_highlight_update,col_highlight_update,1)
 	}
 }
 //Profile
@@ -179,7 +191,7 @@ if mouse_x > 8 and mouse_x < 56 and mouse_y > 6 and mouse_y < 54 and Pause = fal
 }
 draw_set_halign(fa_left)
 draw_set_font(font_system_14)
-draw_text_color(70,20,string(global.Username),col_tlight,col_tlight,col_tlight,col_tlight,1)
+draw_text_color(70,20,string(global.Username),col_toptext,col_toptext,col_toptext,col_toptext,1)
 
 //Bottom stuff
 draw_line(20,670,1260,670)

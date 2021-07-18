@@ -67,13 +67,16 @@ function theme_create(){
 	sprite_save(_spr,0,_loc + "keyboard_dark.png")
 	sprite_save(_spr,1,_loc + "keyboard_light.png")
 	sprite_delete(_spr)
+	//Custom cursor
+	_spr = sprite_duplicate(spr_cursor_custom)
+	sprite_save(_spr,0,_loc + "cursor.png")
+	sprite_delete(_spr)
 	//Settings ini
 	ini_open(_loc + "settings.ini")
-	ini_write_string("Highlight Color 1/2","Red",global.h1_red)
-	ini_write_string("Highlight Color 1/2","Green",global.h1_green)
-	ini_write_string("Highlight Color 1/2","Blue",global.h1_blue)
-	ini_write_string("Highlight Color 2/2","Red",global.h2_red)
-	ini_write_string("Highlight Color 2/2","Green",global.h2_green)
-	ini_write_string("Highlight Color 2/2","Blue",global.h2_blue)
+	ini_write_string("Highlight Color","Color 1",global.Col_Highlight1)
+	ini_write_string("Highlight Color","Color 2",global.Col_Highlight2)
+	ini_write_string("Update Color","Color 1",global.Col_Update1)
+	ini_write_string("Update Color","Color 2",global.Col_Update2)
+	ini_write_string("Top Bar","Text Color",global.Col_TopBarText)
 	ini_close()
 }

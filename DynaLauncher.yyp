@@ -42,6 +42,7 @@
     {"id":{"name":"room_news","path":"rooms/room_news/room_news.yy",},"order":3,},
     {"id":{"name":"sfx_cursor","path":"sounds/sfx_cursor/sfx_cursor.yy",},"order":1,},
     {"id":{"name":"room_profile","path":"rooms/room_profile/room_profile.yy",},"order":6,},
+    {"id":{"name":"spr_cursor_custom","path":"sprites/spr_cursor_custom/spr_cursor_custom.yy",},"order":33,},
     {"id":{"name":"room_main","path":"rooms/room_main/room_main.yy",},"order":1,},
     {"id":{"name":"spr_tinyclock","path":"sprites/spr_tinyclock/spr_tinyclock.yy",},"order":29,},
     {"id":{"name":"obj_setup","path":"objects/obj_setup/obj_setup.yy",},"order":7,},

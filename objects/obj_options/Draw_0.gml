@@ -90,6 +90,9 @@ if Category = 0 then{
 	else if global.Cursor = 2 then{
 		var _cursor = global.tr_cursor[2]
 	}
+	else if global.Cursor = 3 then{
+		var _cursor = global.tr_cursor[3]
+	}
 	if global.Interpolation = 1 then{
 		var _interpolation = global.tr_general[0]
 		var _color = c_lime
@@ -351,7 +354,7 @@ if Category = 4 then{
 if Category = 5 then{
 	draw_set_halign(fa_left)
 	draw_set_font(font_system_14)
-	draw_text(440,98,"Dyna Launcher created by Seph976, inspired by Ninty Launcher, NX+ and of course\nNintendo.\n\nThis project uses sound effects from Nintendo, i do not own these sound\neffects and i am not affiliated with Nintendo in any way, please support them\nby buying and playing their games and consoles!\n\nThis project use the following extensions:\nExecuteShell, GMRichPresence, UnboxedGMS2 and window_command_hook.\n\nTranslators:\nWodsonKun - Português\nMaxNox - Русский")
+	draw_text(440,98,"Dyna Launcher created by Seph976, inspired by Ninty Launcher, NX+ and of course\nNintendo.\n\nThis project uses sound effects from Nintendo, i do not own these sound\neffects and i am not affiliated with Nintendo in any way, please support them\nby buying and playing their games and consoles!\n\nThis project use the following extensions:\nExecuteShell, GMRichPresence, UnboxedGMS2 and window_command_hook.\n\nTranslators:\nWodsonKun - Português\nMaxNox - Русский\n\nDefault wallpaper made by: Ninstar.")
 }
 
 //Middle line

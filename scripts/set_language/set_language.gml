@@ -29,6 +29,7 @@ function set_language(argument0){
 			global.tr_cursor[0] = "Hardware"
 			global.tr_cursor[1] = "Ninty"
 			global.tr_cursor[2] = "NX+"
+			global.tr_cursor[3] = "Custom"
 			global.tr_option[0] = "Resolution"
 			global.tr_option[1] = "Fullscreen"
 			global.tr_option[2] = "Framerate"
@@ -119,6 +120,7 @@ function set_language(argument0){
 			global.tr_cursor[0] = "Hardware"
 			global.tr_cursor[1] = "Ninty"
 			global.tr_cursor[2] = "NX+"
+			global.tr_cursor[3] = "Custom" //NEEDS TRANSLATION
 			global.tr_option[0] = "Resolução"
 			global.tr_option[1] = "Tela cheia"
 			global.tr_option[2] = "Taxa de quadros"
@@ -209,6 +211,7 @@ function set_language(argument0){
 			global.tr_cursor[0] = "Hardware"
 			global.tr_cursor[1] = "Ninty"
 			global.tr_cursor[2] = "NX+"
+			global.tr_cursor[3] = "Custom" //NEEDS TRANSLATION
 			global.tr_option[0] = "Разрешение"
 			global.tr_option[1] = "Полный Экран"
 			global.tr_option[2] = "Framerate"

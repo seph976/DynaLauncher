@@ -152,7 +152,7 @@ if mouse_x > 425 and mouse_x < 1245 and mouse_y > 91 + (36 * 4) and mouse_y < 12
 		if global.PlaySFX = true then{
 			audio_play_sound(sfx_cursor2,1,false)
 		}
-		if global.Cursor = 2 then{
+		if global.Cursor = 3 then{
 			global.Cursor = 0
 		}
 		else{
