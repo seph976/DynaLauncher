@@ -84,121 +84,121 @@ if _hour < 10 then{
 if _minute < 10 then{
 	_minute = "0" + string(_minute)
 }
-draw_sprite(spr_clock,0,1175,32)
-draw_text_color(1200,20,string(_hour) + ":" + string(_minute),col_toptext,col_toptext,col_toptext,col_toptext,1)
-var _menux = 497
+draw_sprite(spr_clock,0,global.Clock_x,global.Clock_y)
+draw_text_color(global.Clock_x + 25,global.Clock_y - 12,string(_hour) + ":" + string(_minute),col_toptext,col_toptext,col_toptext,col_toptext,1)
 //Add game button
-if mouse_x > _menux + (0 * 60) and mouse_x < _menux + 47 + (0 * 60) and mouse_y > 8 and mouse_y < 55 and Pause = false then{
+if mouse_x > global.TopBtn_Addgame_x - (sprite_get_width(spr_addgame) / 2) and mouse_x < global.TopBtn_Addgame_x - (sprite_get_width(spr_addgame) / 2) + sprite_get_width(spr_addgame) and mouse_y > global.TopBtn_Addgame_y - (sprite_get_height(spr_addgame) / 2) and mouse_y < global.TopBtn_Addgame_y - (sprite_get_height(spr_addgame) / 2) + sprite_get_height(spr_addgame) and Pause = false then{
 	if global.TopIconsHighlight = true then{
 		gpu_set_fog(true,col_highlight,0,0)
-		draw_sprite(spr_addgame,0,_menux + (0 * 60),8)
+		draw_sprite(spr_addgame,0,global.TopBtn_Addgame_x,global.TopBtn_Addgame_y)
 		gpu_set_fog(false,col_highlight,0,0)
 	}
 	else{
-		draw_sprite(spr_addgame,0,_menux + (0 * 60),8)
+		//draw_sprite(spr_addgame,0,global.TopBtn_Addgame_x - (sprite_get_width(spr_addgame) / 2),global.TopBtn_Addgame_y - (sprite_get_height(spr_addgame) / 2))
+		draw_sprite(spr_addgame,0,global.TopBtn_Addgame_x,global.TopBtn_Addgame_y)
 	}
 	if global.TopIconsNames = true then{
 		draw_set_halign(fa_center)
 		draw_set_font(font_system_12)
-		draw_text_color(_menux + 23 + (0 * 60),65,string(global.tr_topbutton[0]),col_highlight,col_highlight,col_highlight,col_highlight,1)
+		draw_text_color(global.TopBtn_Addgame_x,global.TopBtn_Addgame_y + 34,string(global.tr_topbutton[0]),col_highlight,col_highlight,col_highlight,col_highlight,1)
 	}
 }
 else{
-	draw_sprite(spr_addgame,0,_menux + (0 * 60),8)
+	draw_sprite(spr_addgame,0,global.TopBtn_Addgame_x,global.TopBtn_Addgame_y)
 }
-//Options button
-if mouse_x > _menux + (1 * 60) and mouse_x < _menux + 47 + (1 * 60) and mouse_y > 8 and mouse_y < 55 and Pause = false then{
+//Settings button
+if mouse_x > global.TopBtn_Settings_x - (sprite_get_width(spr_settings) / 2) and mouse_x < global.TopBtn_Settings_x - (sprite_get_width(spr_settings) / 2) + sprite_get_width(spr_settings) and mouse_y > global.TopBtn_Settings_y - (sprite_get_height(spr_settings) / 2) and mouse_y < global.TopBtn_Settings_y - (sprite_get_height(spr_settings) / 2) + sprite_get_height(spr_settings) and Pause = false then{
 	if global.TopIconsHighlight = true then{
 		gpu_set_fog(true,col_highlight,0,0)
-		draw_sprite(spr_settings,0,_menux + (1 * 60),8)
+		draw_sprite(spr_settings,0,global.TopBtn_Settings_x,global.TopBtn_Settings_y)
 		gpu_set_fog(false,col_highlight,0,0)
 	}
 	else{
-		draw_sprite(spr_settings,0,_menux + (1 * 60),8)
+		draw_sprite(spr_settings,0,global.TopBtn_Settings_x,global.TopBtn_Settings_y)
 	}
 	if global.TopIconsNames = true then{
 		draw_set_halign(fa_center)
 		draw_set_font(font_system_12)
-		draw_text_color(_menux + 23 + (1 * 60),65,string(global.tr_topbutton[1]),col_highlight,col_highlight,col_highlight,col_highlight,1)
+		draw_text_color(global.TopBtn_Settings_x,global.TopBtn_Settings_y + 34,string(global.tr_topbutton[1]),col_highlight,col_highlight,col_highlight,col_highlight,1)
 	}
 }
 else{
-	draw_sprite(spr_settings,0,_menux + (1 * 60),8)
+	draw_sprite(spr_settings,0,global.TopBtn_Settings_x,global.TopBtn_Settings_y)
 }
 //Shop button
-if mouse_x > _menux + (2 * 60) and mouse_x < _menux + 47 + (2 * 60) and mouse_y > 8 and mouse_y < 55 and Pause = false then{
+if mouse_x > global.TopBtn_Shop_x - (sprite_get_width(spr_shop) / 2) and mouse_x < global.TopBtn_Shop_x - (sprite_get_width(spr_shop) / 2) + sprite_get_width(spr_shop) and mouse_y > global.TopBtn_Shop_y - (sprite_get_height(spr_shop) / 2) and mouse_y < global.TopBtn_Shop_y - (sprite_get_height(spr_shop) / 2) + sprite_get_height(spr_shop) and Pause = false then{
 	if global.TopIconsHighlight = true then{
 		gpu_set_fog(true,col_highlight,0,0)
-		draw_sprite(spr_shop,0,_menux + (2 * 60),8)
+		draw_sprite(spr_shop,0,global.TopBtn_Shop_x,global.TopBtn_Shop_y)
 		gpu_set_fog(false,col_highlight,0,0)
 	}
 	else{
-		draw_sprite(spr_shop,0,_menux + (2 * 60),8)
+		draw_sprite(spr_shop,0,global.TopBtn_Shop_x,global.TopBtn_Shop_y)
 	}
 	if global.TopIconsNames = true then{
 		draw_set_halign(fa_center)
 		draw_set_font(font_system_12)
-		draw_text_color(_menux + 23 + (2 * 60),65,string(global.tr_topbutton[2]),col_highlight,col_highlight,col_highlight,col_highlight,1)
+		draw_text_color(global.TopBtn_Shop_x,global.TopBtn_Shop_y + 34,string(global.tr_topbutton[2]),col_highlight,col_highlight,col_highlight,col_highlight,1)
 	}
 }
 else{
-	draw_sprite(spr_shop,0,_menux + (2 * 60),8)
+	draw_sprite(spr_shop,0,global.TopBtn_Shop_x,global.TopBtn_Shop_y)
 }
 //All apps button
-if mouse_x > _menux + (3 * 60) and mouse_x < _menux + 47 + (3 * 60) and mouse_y > 8 and mouse_y < 55 and Pause = false then{
+if mouse_x > global.TopBtn_Apps_x - (sprite_get_width(spr_allapps) / 2) and mouse_x < global.TopBtn_Apps_x - (sprite_get_width(spr_allapps) / 2) + sprite_get_width(spr_allapps) and mouse_y > global.TopBtn_Apps_y - (sprite_get_height(spr_allapps) / 2) and mouse_y < global.TopBtn_Apps_y - (sprite_get_height(spr_allapps) / 2) + sprite_get_height(spr_allapps) and Pause = false then{
 	if global.TopIconsHighlight = true then{
 		gpu_set_fog(true,col_highlight,0,0)
-		draw_sprite(spr_allapps,0,_menux + (3 * 60),8)
+		draw_sprite(spr_allapps,0,global.TopBtn_Apps_x,global.TopBtn_Apps_y)
 		gpu_set_fog(false,col_highlight,0,0)
 	}
 	else{
-		draw_sprite(spr_allapps,0,_menux + (3 * 60),8)
+		draw_sprite(spr_allapps,0,global.TopBtn_Apps_x,global.TopBtn_Apps_y)
 	}
 	if global.TopIconsNames = true then{
 		draw_set_halign(fa_center)
 		draw_set_font(font_system_12)
-		draw_text_color(_menux + 23 + (3 * 60),65,string(global.tr_topbutton[3]),col_highlight,col_highlight,col_highlight,col_highlight,1)
+		draw_text_color(global.TopBtn_Apps_x,global.TopBtn_Apps_y + 34,string(global.tr_topbutton[3]),col_highlight,col_highlight,col_highlight,col_highlight,1)
 	}
 }
 else{
-	draw_sprite(spr_allapps,0,_menux + (3 * 60),8)
+	draw_sprite(spr_allapps,0,global.TopBtn_Apps_x,global.TopBtn_Apps_y)
 }
 //News button
-if mouse_x > _menux + (4 * 60) and mouse_x < _menux + 47 + (4 * 60) and mouse_y > 8 and mouse_y < 55 and Pause = false then{
+if mouse_x > global.TopBtn_News_x - (sprite_get_width(spr_news) / 2) and mouse_x < global.TopBtn_News_x - (sprite_get_width(spr_news) / 2) + sprite_get_width(spr_news) and mouse_y > global.TopBtn_News_y - (sprite_get_height(spr_news) / 2) and mouse_y < global.TopBtn_News_y - (sprite_get_height(spr_news) / 2) + sprite_get_height(spr_news) and Pause = false then{
 	if global.TopIconsHighlight = true then{
 		gpu_set_fog(true,col_highlight,0,0)
-		draw_sprite(spr_news,0,_menux + (4 * 60),8)
+		draw_sprite(spr_news,0,global.TopBtn_News_x,global.TopBtn_News_y)
 		gpu_set_fog(false,col_highlight,0,0)
 	}
 	else{
-		draw_sprite(spr_news,0,_menux + (4 * 60),8)
+		draw_sprite(spr_news,0,global.TopBtn_News_x,global.TopBtn_News_y)
 	}
 	if global.TopIconsNames = true then{
 		draw_set_halign(fa_center)
 		draw_set_font(font_system_12)
-		draw_text_color(_menux + 23 + (4 * 60),65,string(global.tr_topbutton[4]),col_highlight,col_highlight,col_highlight,col_highlight,1)
+		draw_text_color(global.TopBtn_News_x,global.TopBtn_News_y + 34,string(global.tr_topbutton[4]),col_highlight,col_highlight,col_highlight,col_highlight,1)
 	}
 }
 else{
-	draw_sprite(spr_news,0,_menux + (4 * 60),8)
+	draw_sprite(spr_news,0,global.TopBtn_News_x,global.TopBtn_News_y)
 }
 //Update icon
 if LatestVersion = true then{
-	draw_sprite(spr_updateicon,0,1110,32)
-	if mouse_x > 1092 and mouse_x < 1092 + 36 and mouse_y > 19 and mouse_y < 19 + 26 and Pause = false then{
+	draw_sprite(spr_updateicon,0,global.Updateicon_x,global.Updateicon_y)
+	if mouse_x > global.Updateicon_x - (sprite_get_width(spr_updateicon) / 2) and mouse_x < global.Updateicon_x - (sprite_get_width(spr_updateicon) / 2) + sprite_get_width(spr_updateicon) and mouse_y > global.Updateicon_y - (sprite_get_height(spr_updateicon) / 2) and mouse_y < global.Updateicon_y - (sprite_get_height(spr_updateicon) / 2) + sprite_get_height(spr_updateicon) and Pause = false then{
 		draw_set_halign(fa_center)
 		draw_set_font(font_system_12)
-		draw_text_color(1110,65,string(global.tr_update[1]),col_highlight,col_highlight,col_highlight,col_highlight,1)
+		draw_text_color(global.Updateicon_x,global.Updateicon_y + 34,string(global.tr_update[1]),col_highlight,col_highlight,col_highlight,col_highlight,1)
 	}
 }
 else{
 	gpu_set_fog(true,col_highlight_update,0,302)
-	draw_sprite(spr_updateicon,1,1110,32)
+	draw_sprite(spr_updateicon,1,global.Updateicon_x,global.Updateicon_y)
 	gpu_set_fog(false,col_highlight_update,0,0)
-	if mouse_x > 1092 and mouse_x < 1092 + 36 and mouse_y > 19 and mouse_y < 19 + 26 and Pause = false then{
+	if mouse_x > global.Updateicon_x - (sprite_get_width(spr_updateicon) / 2) and mouse_x < global.Updateicon_x - (sprite_get_width(spr_updateicon) / 2) + sprite_get_width(spr_updateicon) and mouse_y > global.Updateicon_y - (sprite_get_height(spr_updateicon) / 2) and mouse_y < global.Updateicon_y - (sprite_get_height(spr_updateicon) / 2) + sprite_get_height(spr_updateicon) and Pause = false then{
 		draw_set_halign(fa_center)
 		draw_set_font(font_system_12)
-		draw_text_color(1110,65,string(global.tr_update[0]) + "\n(" + string(NewVersion) + ")",col_highlight_update,col_highlight_update,col_highlight_update,col_highlight_update,1)
+		draw_text_color(global.Updateicon_x,global.Updateicon_y + 34,string(global.tr_update[0]) + "\n(" + string(NewVersion) + ")",col_highlight_update,col_highlight_update,col_highlight_update,col_highlight_update,1)
 	}
 }
 //Profile
@@ -219,14 +219,14 @@ if sprite_exists(spr_profileimage_default) then{
 }
 gpu_set_colorwriteenable(1, 1, 1, 1)
 surface_reset_target()
-draw_surface(_surface, 10, 8)
+draw_surface(_surface, global.Profile_x - 24, global.Profile_y - 24)
 surface_free(_surface)
-if mouse_x > 8 and mouse_x < 56 and mouse_y > 6 and mouse_y < 54 and Pause = false then{
-	draw_sprite_ext(spr_profileimage_small_select,0,8,6,1,1,0,col_highlight,1)
+if mouse_x > global.Profile_x - 26 and mouse_x < global.Profile_x + 22 and mouse_y > global.Profile_y - 26 and mouse_y < global.Profile_y + 22 and Pause = false then{
+	draw_sprite_ext(spr_profileimage_small_select,0,global.Profile_x - 26,global.Profile_y - 26,1,1,0,col_highlight,1)
 }
 draw_set_halign(fa_left)
 draw_set_font(font_system_14)
-draw_text_color(70,20,string(global.Username),col_toptext,col_toptext,col_toptext,col_toptext,1)
+draw_text_color(global.Profile_x + 36,global.Profile_y - 12,string(global.Username),col_toptext,col_toptext,col_toptext,col_toptext,1)
 
 //Bottom stuff
 draw_line(20,670,1260,670)

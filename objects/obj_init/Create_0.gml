@@ -149,6 +149,22 @@ global.Col_Update2 = 32768
 global.Col_TopBarText = 15790320
 global.TopIconsHighlight = true
 global.TopIconsNames = true
+global.TopBtn_Addgame_x = 520
+global.TopBtn_Addgame_y = 31
+global.TopBtn_Settings_x = 580
+global.TopBtn_Settings_y = 31
+global.TopBtn_Shop_x = 640
+global.TopBtn_Shop_y = 31
+global.TopBtn_Apps_x = 700
+global.TopBtn_Apps_y = 31
+global.TopBtn_News_x = 760
+global.TopBtn_News_y = 31
+global.Profile_x = 34
+global.Profile_y = 32
+global.Updateicon_x = 1110
+global.Updateicon_y = 32
+global.Clock_x = 1175
+global.Clock_y = 32
 
 //Check custom theme
 if !directory_exists(game_save_id + "\\Theme") then{

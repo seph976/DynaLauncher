@@ -44,9 +44,8 @@ if Pause = true and Timertype = 2 then{
 	}
 }
 
-var _menux = 497
 //Add game button
-if mouse_x > _menux + (0 * 60) and mouse_x < _menux + 47 + (0 * 60) and mouse_y > 8 and mouse_y < 55 then{
+if mouse_x > global.TopBtn_Addgame_x - (sprite_get_width(spr_addgame) / 2) and mouse_x < global.TopBtn_Addgame_x - (sprite_get_width(spr_addgame) / 2) + sprite_get_width(spr_addgame) and mouse_y > global.TopBtn_Addgame_y - (sprite_get_height(spr_addgame) / 2) and mouse_y < global.TopBtn_Addgame_y - (sprite_get_height(spr_addgame) / 2) + sprite_get_height(spr_addgame) then{
 	if mouse_check_button_pressed(mb_left) and Pause = false then{
 		if global.PlaySFX = true then{
 			audio_play_sound(sfx_menu,1,false)
@@ -58,7 +57,7 @@ if mouse_x > _menux + (0 * 60) and mouse_x < _menux + 47 + (0 * 60) and mouse_y 
 }
 
 //Options button
-if mouse_x > _menux + (1 * 60) and mouse_x < _menux + 47 + (1 * 60) and mouse_y > 8 and mouse_y < 55 then{
+if mouse_x > global.TopBtn_Settings_x - (sprite_get_width(spr_settings) / 2) and mouse_x < global.TopBtn_Settings_x - (sprite_get_width(spr_settings) / 2) + sprite_get_width(spr_settings) and mouse_y > global.TopBtn_Settings_y - (sprite_get_height(spr_settings) / 2) and mouse_y < global.TopBtn_Settings_y - (sprite_get_height(spr_settings) / 2) + sprite_get_height(spr_settings) then{
 	if mouse_check_button_pressed(mb_left) and Pause = false then{
 		if global.PlaySFX = true then{
 			audio_play_sound(sfx_options,1,false)
@@ -70,7 +69,7 @@ if mouse_x > _menux + (1 * 60) and mouse_x < _menux + 47 + (1 * 60) and mouse_y 
 }
 
 //Shop button
-if mouse_x > _menux + (2 * 60) and mouse_x < _menux + 47 + (2 * 60) and mouse_y > 8 and mouse_y < 55 then{
+if mouse_x > global.TopBtn_Shop_x - (sprite_get_width(spr_shop) / 2) and mouse_x < global.TopBtn_Shop_x - (sprite_get_width(spr_shop) / 2) + sprite_get_width(spr_shop) and mouse_y > global.TopBtn_Shop_y - (sprite_get_height(spr_shop) / 2) and mouse_y < global.TopBtn_Shop_y - (sprite_get_height(spr_shop) / 2) + sprite_get_height(spr_shop) then{
 	if mouse_check_button_pressed(mb_left) and Pause = false then{
 		if global.PlaySFX = true then{
 			audio_play_sound(sfx_alert,1,false)
@@ -80,7 +79,7 @@ if mouse_x > _menux + (2 * 60) and mouse_x < _menux + 47 + (2 * 60) and mouse_y 
 }
 
 //All apps button
-if mouse_x > _menux + (3 * 60) and mouse_x < _menux + 47 + (3 * 60) and mouse_y > 8 and mouse_y < 55 then{
+if mouse_x > global.TopBtn_Apps_x - (sprite_get_width(spr_allapps) / 2) and mouse_x < global.TopBtn_Apps_x - (sprite_get_width(spr_allapps) / 2) + sprite_get_width(spr_allapps) and mouse_y > global.TopBtn_Apps_y - (sprite_get_height(spr_allapps) / 2) and mouse_y < global.TopBtn_Apps_y - (sprite_get_height(spr_allapps) / 2) + sprite_get_height(spr_allapps) then{
 	if mouse_check_button_pressed(mb_left) and Pause = false then{
 		if global.PlaySFX = true then{
 			audio_play_sound(sfx_menu,1,false)
@@ -92,7 +91,7 @@ if mouse_x > _menux + (3 * 60) and mouse_x < _menux + 47 + (3 * 60) and mouse_y 
 }
 
 //News button
-if mouse_x > _menux + (4 * 60) and mouse_x < _menux + 47 + (4 * 60) and mouse_y > 8 and mouse_y < 55 then{
+if mouse_x > global.TopBtn_News_x - (sprite_get_width(spr_news) / 2) and mouse_x < global.TopBtn_News_x - (sprite_get_width(spr_news) / 2) + sprite_get_width(spr_news) and mouse_y > global.TopBtn_News_y - (sprite_get_height(spr_news) / 2) and mouse_y < global.TopBtn_News_y - (sprite_get_height(spr_news) / 2) + sprite_get_height(spr_news) then{
 	if mouse_check_button_pressed(mb_left) and Pause = false then{
 		if global.PlaySFX = true then{
 			audio_play_sound(sfx_menu,1,false)
@@ -105,7 +104,7 @@ if mouse_x > _menux + (4 * 60) and mouse_x < _menux + 47 + (4 * 60) and mouse_y 
 
 //Go to update download
 if LatestVersion = false then{
-	if mouse_x > 1092 and mouse_x < 1092 + 36 and mouse_y > 19 and mouse_y < 19 + 26 then{
+	if mouse_x > global.Updateicon_x - (sprite_get_width(spr_updateicon) / 2) and mouse_x < global.Updateicon_x - (sprite_get_width(spr_updateicon) / 2) + sprite_get_width(spr_updateicon) and mouse_y > global.Updateicon_y - (sprite_get_height(spr_updateicon) / 2) and mouse_y < global.Updateicon_y - (sprite_get_height(spr_updateicon) / 2) + sprite_get_height(spr_updateicon) then{
 		if mouse_check_button_pressed(mb_left) and Pause = false then{
 			url_open(global.LatestDownload)
 		}
@@ -113,7 +112,7 @@ if LatestVersion = false then{
 }
 
 //Profile icon
-if mouse_x > 7 and mouse_x < 62 and mouse_y > 5 and mouse_y < 60 then{
+if mouse_x > global.Profile_x - 26 and mouse_x < global.Profile_x + 22 and mouse_y > global.Profile_y - 26 and mouse_y < global.Profile_y + 22 then{
 	if mouse_check_button_pressed(mb_left) and Pause = false then{
 		if global.PlaySFX = true then{
 			audio_play_sound(sfx_menu,1,false)
