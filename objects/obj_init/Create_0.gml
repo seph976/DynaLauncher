@@ -141,12 +141,14 @@ else{
 	ini_close()
 }
 
-//Color variables
+//Theme variables
 global.Col_Highlight1 = 16776960
 global.Col_Highlight2 = 8421376
 global.Col_Update1 = 65280
 global.Col_Update2 = 32768
 global.Col_TopBarText = 15790320
+global.TopIconsHighlight = true
+global.TopIconsNames = true
 
 //Check custom theme
 if !directory_exists(game_save_id + "\\Theme") then{

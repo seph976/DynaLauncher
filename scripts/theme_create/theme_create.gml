@@ -78,5 +78,7 @@ function theme_create(){
 	ini_write_string("Update Color","Color 1",global.Col_Update1)
 	ini_write_string("Update Color","Color 2",global.Col_Update2)
 	ini_write_string("Top Bar","Text Color",global.Col_TopBarText)
+	ini_write_string("Top Bar","Highlight Buttons",global.TopIconsHighlight)
+	ini_write_string("Top Bar","Button Names",global.TopIconsNames)
 	ini_close()
 }

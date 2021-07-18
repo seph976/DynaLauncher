@@ -30,5 +30,7 @@ function theme_import(){
 	global.Col_Update1 = ini_read_real("Update Color","Color 1",global.Col_Update1)
 	global.Col_Update2 = ini_read_real("Update Color","Color 2",global.Col_Update2)
 	global.Col_TopBarText = ini_read_real("Top Bar","Text Color",global.Col_TopBarText)
+	global.TopIconsHighlight = ini_read_real("Top Bar","Highlight Buttons",global.TopIconsHighlight)
+	global.TopIconsNames = ini_read_real("Top Bar","Button Names",global.TopIconsNames)
 	ini_close()
 }
