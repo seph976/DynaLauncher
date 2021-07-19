@@ -23,11 +23,13 @@ else{
 	draw_sprite(spr_logo,0,global.Logo_x,global.Logo_y)
 }
 if Gamename != "" then{
-	draw_set_halign(fa_left)
 	draw_set_font(font_system_12)
-	draw_text_outline(string(Gamename),5,70,c_white,c_black)
-	draw_text_outline(string(Developer),5,90,c_white,c_black)
-	draw_text_outline(string(global.tr_gameinfo[0]) + " " + string(Lastplayed),5,110,c_white,c_black)
+	draw_set_halign(global.Info_Name_ha)
+	draw_text_outline(string(Gamename),global.Info_Name_x,global.Info_Name_y,c_white,c_black)
+	draw_set_halign(global.Info_Dev_ha)
+	draw_text_outline(string(Developer),global.Info_Dev_x,global.Info_Dev_y,c_white,c_black)
+	draw_set_halign(global.Info_Date_ha)
+	draw_text_outline(string(global.tr_gameinfo[0]) + " " + string(Lastplayed),global.Info_Date_x,global.Info_Date_y,c_white,c_black)
 }
 
 //Game icons

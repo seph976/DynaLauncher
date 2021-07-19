@@ -167,6 +167,15 @@ global.Clock_x = 1175
 global.Clock_y = 32
 global.Logo_x = 640
 global.Logo_y = 189
+global.Info_Name_x = 5
+global.Info_Name_y = 70
+global.Info_Name_ha = fa_left
+global.Info_Dev_x = 5
+global.Info_Dev_y = 90
+global.Info_Dev_ha = fa_left
+global.Info_Date_x = 5
+global.Info_Date_y = 110
+global.Info_Date_ha = fa_left
 
 //Check custom theme
 if !directory_exists(game_save_id + "\\Theme") then{
