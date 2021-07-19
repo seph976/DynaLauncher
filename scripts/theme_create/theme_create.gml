@@ -96,5 +96,7 @@ function theme_create(){
 	ini_write_string("Top Bar","Update Icon Y",global.Updateicon_y)
 	ini_write_string("Top Bar","Clock X",global.Clock_x)
 	ini_write_string("Top Bar","Clock Y",global.Clock_y)
+	ini_write_string("Logo","X",global.Logo_x)
+	ini_write_string("Logo","Y",global.Logo_y)
 	ini_close()
 }

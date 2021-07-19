@@ -10,17 +10,17 @@ else if global.Theme = 1 then{
 
 //Logo
 if Cursor = -1 or !file_exists(game_save_id + "Games\\" + string(Cursor + 1) + "\\logo.png") then{
-	draw_sprite(spr_logo,0,room_width / 2,189)
+	draw_sprite(spr_logo,0,global.Logo_x,global.Logo_y)
 }
 
 //Game info
 if global.DynamicLogo = true then{
 	if Cursor > -1 and file_exists(game_save_id + "Games\\" + string(Cursor + 1) + "\\logo.png") then{
-		draw_sprite(Logo,0,room_width / 2,63)
+		draw_sprite(Logo,0,global.Logo_x,global.Logo_y)
 	}
 }
 else{
-	draw_sprite(spr_logo,0,room_width / 2,189)
+	draw_sprite(spr_logo,0,global.Logo_x,global.Logo_y)
 }
 if Gamename != "" then{
 	draw_set_halign(fa_left)
@@ -94,7 +94,6 @@ if mouse_x > global.TopBtn_Addgame_x - (sprite_get_width(spr_addgame) / 2) and m
 		gpu_set_fog(false,col_highlight,0,0)
 	}
 	else{
-		//draw_sprite(spr_addgame,0,global.TopBtn_Addgame_x - (sprite_get_width(spr_addgame) / 2),global.TopBtn_Addgame_y - (sprite_get_height(spr_addgame) / 2))
 		draw_sprite(spr_addgame,0,global.TopBtn_Addgame_x,global.TopBtn_Addgame_y)
 	}
 	if global.TopIconsNames = true then{

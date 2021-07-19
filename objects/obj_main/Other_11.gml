@@ -76,7 +76,7 @@ if Logo != undefined then{
 }
 if file_exists(game_save_id + "Games\\" + string(Cursor + 1) + "\\logo.png") then{
 	Logo = sprite_add(game_save_id + "Games\\" + string(Cursor + 1) + "\\logo.png",0,false,false,0,0)
-	sprite_set_offset(Logo, sprite_get_width(Logo) / 2, 0)
+	sprite_set_offset(Logo, sprite_get_width(Logo) / 2, sprite_get_height(Logo) / 2)
 }
 
 //Update music

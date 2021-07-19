@@ -165,6 +165,8 @@ global.Updateicon_x = 1110
 global.Updateicon_y = 32
 global.Clock_x = 1175
 global.Clock_y = 32
+global.Logo_x = 640
+global.Logo_y = 189
 
 //Check custom theme
 if !directory_exists(game_save_id + "\\Theme") then{
