@@ -9,7 +9,7 @@ layer_background_change(layer_background_get_id(layer_get_id("Background")),spr_
 
 //News
 News =
-"Version: 1.2.0 (XX/XX/2021)\n-The main theme of the launcher is now customizable!\n-New and updated default theme for the launcher.\n-Options added for enableing or disableing dynamic wallpapers and logos.\n-Updated credits." +
+"Version: 1.2.0 (XX/XX/2021)\n-The main theme of the launcher is now fully customizable!\n-New and updated default theme for the launcher.\n-Options added for enableing or disableing dynamic wallpapers and logos.\n-Some translations might be incomplete.\n-Updated credits." +
 "\n\n" +
 "Version: 1.1.1 (14/07/2021)\n-Added support for Mesen (NES emulator).\n-Added support for VBA-M (GB / GBC / GBA emulator)\n-Added more icons for rich presence." +
 "\n\n" +
