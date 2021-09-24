@@ -1,7 +1,7 @@
 /// @description Setup
 
 //System
-global.Version = "1.2.0 DEV"
+global.Version = "1.2.0"
 
 //Setup
 global.Theme = 1 //0 - Light / 1 - Dark

@@ -239,5 +239,35 @@ function discord_check_icon(){
 			discord_set_image_large("escapefromtarkov")
 			discord_set_image_small("playing")
 		break
+		case "Kena: Bridge of Spirits":
+			discord_set_server(global.DID1)
+			discord_set_image_large("kena")
+			discord_set_image_small("playing")
+		break
+		case "Kingdom Hearts HD 1.5 + 2.5":
+			discord_set_server(global.DID1)
+			discord_set_image_large("kh1-2")
+			discord_set_image_small("playing")
+		break
+		case "Kingdom Hearts HD 2.8":
+			discord_set_server(global.DID1)
+			discord_set_image_large("kh18")
+			discord_set_image_small("playing")
+		break
+		case "Kingdom Hearts III":
+			discord_set_server(global.DID1)
+			discord_set_image_large("kh3")
+			discord_set_image_small("playing")
+		break
+		case "Diablo II: Resurrected":
+			discord_set_server(global.DID1)
+			discord_set_image_large("diablo2r")
+			discord_set_image_small("playing")
+		break
+		case "Diablo III":
+			discord_set_server(global.DID1)
+			discord_set_image_large("diablo3")
+			discord_set_image_small("playing")
+		break
 	}
 }

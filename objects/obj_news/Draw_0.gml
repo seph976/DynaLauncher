@@ -30,7 +30,7 @@ draw_set_font(font_system_20)
 draw_text(85,15,string(global.tr_topbutton[4]))
 
 //Bottom stuff
-draw_sprite_part(spr_wallpaper,0,0,669,1280,51,0,669)
+draw_sprite_part(spr_wallpaper,0,0,669,1280,50,0,670)
 draw_line(20,670,1260,670)
 draw_sprite(spr_keyboard,global.Theme,50,695)
 draw_set_halign(fa_left)
