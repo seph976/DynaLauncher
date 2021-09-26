@@ -64,7 +64,12 @@ draw_text(85,15,string(global.tr_topbutton[3]) + " (" + string(global.Games) + "
 //Bottom stuff
 draw_sprite_part(spr_wallpaper,0,0,669,1280,51,0,669)
 draw_line(20,670,1260,670)
-draw_sprite(spr_keyboard,global.Theme,50,695)
+if global.Theme = 0 then{
+	draw_sprite(spr_keyboard,0,50,695)
+}
+else{
+	draw_sprite(spr_keyboard_2,0,50,695)
+}
 draw_set_halign(fa_left)
 draw_set_font(font_system_14)
 draw_text(90,683,string(global.tr_controller[1]) + "   " + string(global.tr_controller[0]) + "   " + string(global.tr_controller[2]) + "   " + string(global.tr_controller[3]))

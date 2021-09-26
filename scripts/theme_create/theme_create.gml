@@ -52,7 +52,9 @@ function theme_create(){
 	sprite_delete(_spr)
 	_spr = sprite_duplicate(spr_updateicon)
 	sprite_save(_spr,0,_loc + "update_0.png")
-	sprite_save(_spr,1,_loc + "update_1.png")
+	sprite_delete(_spr)
+	_spr = sprite_duplicate(spr_updateicon_2)
+	sprite_save(_spr,0,_loc + "update_1.png")
 	sprite_delete(_spr)
 	//Scrollbar
 	_spr = sprite_duplicate(spr_scroll_vertical)
@@ -65,7 +67,9 @@ function theme_create(){
 	//Controller
 	_spr = sprite_duplicate(spr_keyboard)
 	sprite_save(_spr,0,_loc + "keyboard_dark.png")
-	sprite_save(_spr,1,_loc + "keyboard_light.png")
+	sprite_delete(_spr)
+	_spr = sprite_duplicate(spr_keyboard_2)
+	sprite_save(_spr,0,_loc + "keyboard_light.png")
 	sprite_delete(_spr)
 	//Custom cursor
 	_spr = sprite_duplicate(spr_cursor_custom)

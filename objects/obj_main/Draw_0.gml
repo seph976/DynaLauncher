@@ -194,9 +194,9 @@ if LatestVersion = true then{
 }
 else{
 	gpu_set_fog(true,col_highlight_update,0,302)
-	draw_sprite(spr_updateicon,1,global.Updateicon_x,global.Updateicon_y)
+	draw_sprite(spr_updateicon_2,1,global.Updateicon_x,global.Updateicon_y)
 	gpu_set_fog(false,col_highlight_update,0,0)
-	if mouse_x > global.Updateicon_x - (sprite_get_width(spr_updateicon) / 2) and mouse_x < global.Updateicon_x - (sprite_get_width(spr_updateicon) / 2) + sprite_get_width(spr_updateicon) and mouse_y > global.Updateicon_y - (sprite_get_height(spr_updateicon) / 2) and mouse_y < global.Updateicon_y - (sprite_get_height(spr_updateicon) / 2) + sprite_get_height(spr_updateicon) and Pause = false then{
+	if mouse_x > global.Updateicon_x - (sprite_get_width(spr_updateicon_2) / 2) and mouse_x < global.Updateicon_x - (sprite_get_width(spr_updateicon_2) / 2) + sprite_get_width(spr_updateicon_2) and mouse_y > global.Updateicon_y - (sprite_get_height(spr_updateicon_2) / 2) and mouse_y < global.Updateicon_y - (sprite_get_height(spr_updateicon_2) / 2) + sprite_get_height(spr_updateicon_2) and Pause = false then{
 		draw_set_halign(fa_center)
 		draw_set_font(font_system_12)
 		draw_text_color(global.Updateicon_x,global.Updateicon_y + 34,string(global.tr_update[0]) + "\n(" + string(NewVersion) + ")",col_highlight_update,col_highlight_update,col_highlight_update,col_highlight_update,1)
@@ -231,7 +231,12 @@ draw_text_color(global.Profile_x + 36,global.Profile_y - 12,string(global.Userna
 
 //Bottom stuff
 draw_line(20,670,1260,670)
-draw_sprite(spr_keyboard,global.Theme,50,695)
+if global.Theme = 0 then{
+	draw_sprite(spr_keyboard,0,50,695)
+}
+else{
+	draw_sprite(spr_keyboard_2,0,50,695)
+}
 draw_set_halign(fa_left)
 draw_set_font(font_system_14)
 draw_text(90,683,string(global.tr_controller[0]) + "   " + string(global.tr_controller[2]) + "   " + string(global.tr_controller[3]))
